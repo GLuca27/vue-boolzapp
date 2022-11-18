@@ -13,13 +13,7 @@
     <title>Document</title>
 </head>
 <body>
-    <div id="app"></div>
-
-    <header>
-
-    </header>
-
-    <main>
+    <div id="app">
         <div class="container">
             <aside>
                 <div class="top-aside">
@@ -51,12 +45,16 @@
 
                 <div class="contacts">
 
-                    <div class="contact">                       
+                    <div class="contact" 
+                        v-for="(contatto, index) in contacts" 
+                        :class="{active: index === activeContact}"
+                        @click = "changeContact(index)"
+                    >                       
                         <div class="img-contact">
-                            <img src="img/avatar_1.jpg" alt="">
+                            <img :src="'img/avatar' + contatto.avatar + '.jpg'" alt="">
                         </div>
                         <div class="info-contact">
-                            <h3 class='contact-name'>Michele</h3>
+                            <h3 class='contact-name'>{{contatto.name}}</h3>
                             <p>Ultimo messaggio inviato</p>
                         </div>
                         <div class="time">
@@ -64,96 +62,6 @@
                         </div>
                     </div>
 
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_2.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Fabio</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_3.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Samuele</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_4.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Alessandro B.</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_5.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Alessandro L.</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_6.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Claudia</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_7.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Federico</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
-
-                    <div class="contact">
-                        <div class="img-contact">
-                            <img src="img/avatar_8.jpg" alt="">
-                        </div>
-                        <div class="info-contact">
-                            <h3 class='contact-name'>Davide</h3>
-                            <p>Ultimo messaggio inviato</p>
-                        </div>
-                        <div class="time">
-                            12:00
-                        </div>
-                    </div>
                 </div>    
             </aside>
 
@@ -178,7 +86,21 @@
                 </div>
 
                 <div class="chat">
-                    
+                    <div class="message-container">
+                        <div class="message">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro officia, natus in impedit earum adipisci nemo iusto? Nulla aspernatur reiciendis nemo optio quam officiis perspiciatis recusandae expedita autem sit?
+                        </div>
+                    </div>
+                    <div class="message-container sent">
+                        <div class="message">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro officia, natus in impedit earum adipisci nemo iusto? Nulla aspernatur reiciendis nemo optio quam officiis perspiciatis recusandae expedita autem sit?
+                        </div>
+                    </div>
+                    <div class="message-container sent">
+                        <div class="message">
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro officia, natus in impedit earum adipisci nemo iusto? Nulla aspernatur reiciendis nemo optio quam officiis perspiciatis recusandae expedita autem sit?
+                        </div>
+                    </div>
                 </div>
 
                 <div class="messages-texting">
@@ -194,7 +116,8 @@
                 </div>
             </section>
         </div>
-    </main>
+    </div>
+   
     <script src="main.js"></script>
 </body>
 </html>

@@ -5,21 +5,17 @@
     font-family: 'Lato', sans-serif;
 }
 
-body{
+body {
     height: 100vh;
     width: 100%;
-}
+    background: linear-gradient(to bottom, #009688 20%, #d9dbd5 20%);
+  }
 
-header{
-    width: 100%;
-    height: 10%;
-    background-color: #009688;
-}
 
-main{
+#app{
     width: 100%;
-    height: 90%;
-    background-color: #d5dbd9;
+    height: calc(100% - 60px);
+    margin-top: 30px;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -27,7 +23,7 @@ main{
 
 .container{
     width: 80%;
-    height: 90vh;
+    height: 100%;
     display: flex;
 }
 
@@ -152,6 +148,9 @@ aside{
     background-color: lightgrey;
     cursor: pointer;
 }
+.contact.active {
+    background-color: gray;
+}
 
 .contact .img-contact {
     width: 75px;
@@ -250,7 +249,26 @@ section{
 
 .chat{
     height: calc(100% - 180px);
+    overflow-y: auto;
     background-image: url(img/mine.jpg);
+    padding: 50px;
+}
+
+.message-container {
+    display: flex;
+    margin-bottom: 10px;
+}
+.message-container.sent {
+    justify-content: flex-end;
+}
+.message-container.sent .message{
+    background-color: green;
+}
+.message {
+    width: 40%;
+    padding: 10px;
+    background-color: #fff;
+    border-radius: 10px;
 }
 
 .messages-texting {

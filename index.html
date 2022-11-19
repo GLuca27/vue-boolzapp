@@ -87,8 +87,10 @@
 
                 <div class="chat">
                     <div class="message-container">
-                        <div class="message">
-                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque porro officia, natus in impedit earum adipisci nemo iusto? Nulla aspernatur reiciendis nemo optio quam officiis perspiciatis recusandae expedita autem sit?
+                        <div class="message"
+                        v-for="(messages, index) in contacts" 
+                        :class="{active: index === activeContact}">
+                            {{ contacts.messages }}
                         </div>
                     </div>
                     <div class="message-container sent">

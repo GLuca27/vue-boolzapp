@@ -262,13 +262,19 @@ section{
     justify-content: flex-end;
 }
 .message-container.sent .message{
-    background-color: green;
+    background-color: #d5f9ba;
 }
 .message {
     width: 40%;
     padding: 10px;
     background-color: #fff;
     border-radius: 10px;
+}
+small{
+    color: gray;
+    font-size: 10px;
+    display: flex;
+    justify-content: flex-end;
 }
 
 .messages-texting {

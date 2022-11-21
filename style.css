@@ -255,10 +255,10 @@ section{
 }
 
 .message-container {
-    display: flex;
     margin-bottom: 10px;
 }
 .message-container.sent {
+    display: flex;
     justify-content: flex-end;
 }
 .message-container.sent .message{
